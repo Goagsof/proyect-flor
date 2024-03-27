@@ -321,11 +321,23 @@
 </html>
 <footer>
     <div class="audio">
-        <audio controls autoplay loop>
+        <audio id="myAudio" controls autoplay loop>
             <source src="fast car.mp3" type="audio/mpeg">
         </audio>
+        <button onclick="toggleAudio()">Reproducir/Pausar</button>
     </div>
 </footer>
 </body>
+<script>
+    var audio = document.getElementById("myAudio");
+
+    function toggleAudio() {
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    }
+</script>
 
 </html>
